@@ -1,0 +1,58 @@
+.container{
+    height: 40px;
+    width: 100%;
+    background-color:white;
+display: flex;
+
+}
+.navbar{
+    transition: 0.5s all ease;
+    position: sticky;
+    top:0;
+}
+
+h1{
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+img{
+height: 38px;
+width: 60px;
+margin-right: 30px;
+}
+.minibar{
+    margin-left: 200px;
+    padding: 12px;
+    
+}
+span{
+    padding: 12px;
+    
+}
+button{
+    height: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+
+}
+button:hover{
+background-color:skyblue;
+}
+.menu{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: skyblue;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    font-family: "montserrat",sans-serif;
+}
