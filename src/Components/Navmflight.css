@@ -1,0 +1,150 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.header {
+    height: 220px;
+    width: 100%;
+    background-color: #003366;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.button-class {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-class {
+    background-color: #ffcc33;
+    color: #003366;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-class:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* Search Container */
+.header-search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.header-search {
+    height: 45px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 2px solid #ffcc33;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.headersearch-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.headersearch-text {
+    color: #ffcc33;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Date and Class Text */
+.header-date, .header-class {
+    color: #e6e6e6;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Flight Summary Section */
+.flight-summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 25px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.flight-image {
+    width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flight-text {
+    width: 60%;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.flight-text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.flight-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .flight-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+    .flight-image, .flight-text {
+        width: 100%;
+    }
+    .header-h1 {
+        font-size: 2rem;
+    }
+}

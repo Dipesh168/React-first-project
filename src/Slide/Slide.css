@@ -1,0 +1,24 @@
+.slide {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+    padding:30px 0px;
+   
+
+    .slide-container{
+       
+    width: 1800px;
+    
+    }
+    .carousel-prev,.carousel-next{
+        width: 30px;
+        height: 30px;
+        background-color: wheat;
+        
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}

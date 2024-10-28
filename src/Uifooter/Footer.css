@@ -1,0 +1,88 @@
+/* Footer Container */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #004c8c; /* Deep blue background */
+  color: #e0f7ff; /* Light blue text for readability */
+  padding: 40px 0;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffd700; /* Gold for headers for visual contrast */
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 0.9rem;
+  color: #b0d6f1; /* Muted sky blue for text */
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  color: #ffd700; /* Gold on hover for emphasis */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section input[type="email"] {
+  padding: 10px;
+  border: 1px solid #b0d6f1; /* Light blue border */
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  background-color: #e0f7ff; /* Light blue input background */
+  color: #333;
+}
+
+.footer-section button[type="submit"] {
+  background-color: #ffd700; /* Gold button for standout */
+  color: #333;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-section button[type="submit"]:hover {
+  background-color: #ffc107; /* Brighter gold on hover */
+}
+
+.footer-section p {
+  font-size: 0.85rem;
+  color: #b0d6f1; /* Soft blue for subtle text */
+}
+
+/* Bottom copyright section */
+.footer-container > .footer-section:last-child {
+  text-align: center;
+  flex: 1 1 100%;
+  margin-top: 20px;
+}
+
+.footer-container > .footer-section:last-child p {
+  color: #b0d6f1; /* Muted blue for copyright */
+  font-size: 0.8rem;
+}

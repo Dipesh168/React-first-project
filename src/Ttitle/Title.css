@@ -1,0 +1,46 @@
+.features {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    
+  }
+  
+  .containers {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .imgs {
+    flex: 1;
+  }
+  
+  .imgs img {
+    height: 300px; 
+    width: 400px;
+    margin-left: 200px; 
+    object-fit: cover; 
+  }
+  .mytitle{
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  
+  .featureitem {
+    margin-left: 50px;
+    flex: 1;  
+    padding-left: 20px; 
+    background-color: #f0f8ff;
+    border: 2px solid red;
+    border-radius: 7px;
+    border: none;
+  }
+  
+  .titiles {
+    text-align: center;
+    color:#0fc0fc ; 
+  }
+  p{
+    letter-spacing: 1px;
+    color: black;
+  }
+  

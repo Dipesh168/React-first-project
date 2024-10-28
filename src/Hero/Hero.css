@@ -1,0 +1,43 @@
+.herocontainer{
+    width: 100%;
+    overflow: hidden;
+}
+.hero-video{
+    
+    height: 260px;
+    width: 100%;
+    display: flexbox;
+    object-fit: cover;
+   
+}
+.hero-text{
+    position: absolute;
+    top: 38%;
+    left: 30%;
+    transform: translate(-50%,-40%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+.overlay{
+    font-size: 2rem; 
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.secondtext{
+    position: absolute;
+    top: 38%;
+    left:70%;
+    transform: translate(-50%,-40%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+.overlay-second{
+    font-size: 2rem; 
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+}

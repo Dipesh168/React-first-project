@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [active, setActive] = useState(false);
+  const [open, setopen] = useState(false);
+
   const isActive = () => {
-    window.scrollY > 0 ? setActive(true) : setActive(false);
+    window.scrollY > 0 ? setActive(true) : setActive(true);
   };
   useEffect(() => {
     window.addEventListener("scroll", isActive);
@@ -14,28 +16,91 @@ const Nav = () => {
       window.removeEventListener("scroll", isActive);
     };
   }, []);
+  const currentUser = {
+    id: 1,
+    username: "dipesh",
+    icon: "fa-solid fa-user",
+  };
+  const countries = [
+    "UK",
+    "Nepal",
+    "Australia",
+    "USA",
+    "Canada",
+    "India",
+    "Germany",
+    "France",
+    "Japan",
+  ];
+  const [suggestion, setsuggestion] = useState(true);
+  const [input, setinput] = useState();
 
   return (
     <div className="navbar">
       <div className="container">
-        <h1>Travel</h1>
+        <h1 className="logo-name">Travel</h1>
         <img src={logo} alt="Logo" />
-        <div className="minibar">
-          {/* <Link></Link> */}
-          <span>
-            <input type="text" placeholder="search your destiny" /> search
-          </span>
-          <span>Terms & Policy</span>
-          <span>Book Now</span>
+        {/* <Link></Link> */}
+        <div className="search">
+          <div className="search-input">
+            <input type="text" placeholder="Enter Destination or Hotel" />
+            <div id="suggestion" className="suggestion"></div>
+          </div>
+          <button className="search-button">search</button>
         </div>
-        <button>Join</button>
+        <div className="minibar">
+          <span className="barmap">
+            {" "}
+            <Link to="/map" className="link">
+              {" "}
+              <i class="fa-solid fa-location-dot"></i>Map{" "}
+            </Link>
+          </span>
+          <span>
+            <Link to="/flight" className="nav-link">
+              <i class="fa-solid fa-plane-departure"></i>Airline
+            </Link>
+          </span>
+          <span>
+            <Link to="/hotel" className="hotel-link">
+              <i class="fa-solid fa-hotel"></i>Hotel
+            </Link>
+          </span>
+        </div>
+
+        {!currentUser && <button>Join</button>}
+        {currentUser && (
+          <div className="user" onClick={() => setopen(!open)}>
+            <span>
+              <i
+                className={currentUser.icon}
+                style={{ marginRight: "5px" }}
+              ></i>
+              {currentUser?.username}
+            </span>
+            <>
+              {open && (
+                <div className="option">
+                  <span>profile</span>
+                  <span>Record</span>
+                  <span>Setting</span>
+                  <span>log out</span>
+                </div>
+              )}
+            </>
+          </div>
+        )}
       </div>
       {active && (
         <>
           <hr />
           <div className="menu">
-            <span>Explore</span>
-            <span>Tour/package</span>
+            <Link to="./home" className="home-link">
+              <span>Home</span>
+            </Link>
+            <Link to="./tour" className="tour-link">
+              <span>Tour/package</span>
+            </Link>
             <span>Travel Blog</span>
             <span>Event</span>
             <span>Gallery</span>
@@ -47,5 +112,4 @@ const Nav = () => {
     </div>
   );
 };
-
 export default Nav;
